@@ -11,5 +11,8 @@ function clearDisplay() {
 }
 
 function calculate() {
-    display.value = eval(display.value);
+    // display.value = eval(display.value);
+    for(let i = 0; i < 10; i++) {
+        display.value = i;
+    }
 }
