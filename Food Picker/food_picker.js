@@ -1,4 +1,4 @@
-const display = document.getElementById("display");
+const display = document.getElementById("result");
 
 const foods = [
   "French Fries",
@@ -18,19 +18,16 @@ const foods = [
 ];
 
 function spin() {
-  
+  // display.innerHTML=foods[2];
 
-  function loop(i = 28) {
-    let j = 0;
-    if (j < foods.length) {
-      display.value=foods[j];
-      i--;
-      j++;
+  function loop(i = 0) {
     
-    } else if (i == foods.length && j < 4 * foods.length) {
-      i = 0;
+    if (i < foods.length) {
+      display.innerHTML=foods[i];
+      i++;
+    
     } else {
-      display.value=foods[2];
+      i = 0;;
     }
 
     setTimeout(loop, 20, i);
