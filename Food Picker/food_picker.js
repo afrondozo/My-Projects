@@ -18,17 +18,24 @@ const foods = [
 ];
 
 function spin() {
-  for(let i = 0; i < foods.length; i++) {
-    task(i);
-  }
   
+
+  function loop(i = 28) {
+    let j = 0;
+    if (j < foods.length) {
+      display.value=foods[j];
+      i--;
+      j++;
+    
+    } else if (i == foods.length && j < 4 * foods.length) {
+      i = 0;
+    } else {
+      display.value=foods[2];
+    }
+
+    setTimeout(loop, 20, i);
+  }
+
+  loop();
 }
 
-function task(i) {
-  setTimeout(function() {
-    for(let j = 0; i < foods.length; j++) {
-      display.value = foods[j];
-    }
-    display.value = "test";
-  }, 200* j);
-}
