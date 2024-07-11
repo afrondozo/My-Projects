@@ -310,6 +310,7 @@ section {
 
 .details-container {
   padding: 1.5rem;
+  padding-top: 0;
   flex: 1;
   background: white;
   border-radius: 2rem;
@@ -321,6 +322,8 @@ section {
 .section-container {
   gap: 4rem;
   height: 80%;
+  padding: 0px;
+  margin: 0;
 }
 
 .section__pic-container {
