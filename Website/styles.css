@@ -152,7 +152,7 @@
 
 /* SECTIONS */
 
-img {
+.profile-pic {
     width: 500px;
     border-radius: 250px;
 }
@@ -176,6 +176,7 @@ section {
   justify-content: center;
   gap:5rem;
   height: 80vh;
+  
 }
 
 .section__pic-container {
@@ -195,14 +196,18 @@ section {
 }
 
 .title {
+  text-align: center;
   font-size: 250%;
+  padding: 0;
 }
 
 .section__text__p1 {
+  text-align: center;
   font-size: 1.75rem;
 }
 
 .section__text__p2 {
+  text-align: center;
   font-size: x-large;
 }
 
@@ -259,58 +264,67 @@ section {
 
 /* SECTION */
 .section-container {
+  /*
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   padding: 10px;
-  width: 100%;
+  width: 100%; 
+  */
+  gap: 4rem;
+  height: 80%;
+  margin: 0;
+  padding: 0;
 }
 
 /* ABOUT */
 #about {
-  margin: 5rem;
+  position: relative;
 }
 
-.about-me h1{
-  padding: 10px;
-  font-weight: 900;
-  font-size: 250%;
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 0rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
   text-align: center;
 }
 
-.about-me-section {
-  display: flex;
+.section-container {
+  gap: 4rem;
+  height: 80%;
 }
 
-.about-me-photo {
-  border-radius: 20px;
-  width: 350px;
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
 }
-
-.content1 {
-  padding: 10px;
-}
-
-.content2{
-  padding: 25px;
-  display: flex;
-}
-
-.about-me-details {
-  align-items: center;
-  padding: 10px;
-  display: flex;
-}
-
-.about-me-experience,
-.about-me-education {
-  padding: 10px;
-  border: 1px solid black;
-  width: 200px;
-  margin: 10px;
-}
-
-
-
-
-
