@@ -270,11 +270,13 @@ section {
   border-radius: 10px;
   padding: 10px;
   width: 100%; 
-  */
+  *
   gap: 4rem;
-  height: 80%;
+  height: 100%;
   margin: 0;
   padding: 0;
+  position:relative;
+  */
 }
 
 /* ABOUT */
@@ -291,6 +293,9 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+  margin: 0;
+  padding:0;
+
 }
 
 .about-containers,
@@ -310,7 +315,6 @@ section {
 
 .details-container {
   padding: 1.5rem;
-  padding-top: 0;
   flex: 1;
   background: white;
   border-radius: 2rem;
@@ -321,13 +325,14 @@ section {
 
 .section-container {
   gap: 4rem;
-  height: 80%;
-  padding: 0px;
-  margin: 0;
+  height: 60%;
 }
+
 
 .section__pic-container {
   height: 400px;
   width: 400px;
-  margin: auto 0;
 }
+
+/* EXPERIENCE */
+
