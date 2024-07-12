@@ -167,6 +167,8 @@ section {
 
 .section-container {
   display: flex;
+  padding: 5px;
+  min-width: 1160px;
 }
 
 /* PROFILE SECTION */
@@ -271,6 +273,7 @@ section {
 /* ABOUT */
 #about {
   position: relative;
+  margin-top: 50px;;
 }
 
 .about-containers {
@@ -318,4 +321,14 @@ section {
 }
 
 /* EXPERIENCE */
+.job-title {
+  text-align: left;
+  color: rgb(70, 68, 68);
+  padding-top: 5px;
+}
 
+.job-description{
+  text-align: left;
+  padding-left: 15px;
+  font-size: 95%;
+}
