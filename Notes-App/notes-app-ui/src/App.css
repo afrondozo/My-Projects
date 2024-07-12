@@ -79,3 +79,17 @@ textarea, input {
   background-color: rgb(134, 188, 233);
   cursor: pointer;
 }
+
+.edit-buttons {
+  display:flex;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+
+.edit-buttons button {
+  flex: 1;
+}
+
+.edit-buttons button:last-child {
+  background-color: rgb(230, 60, 60);
+}
