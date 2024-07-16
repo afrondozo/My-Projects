@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding:0;
+}
+
+.title {
+  padding: 5px;
+  text-align: center;
+  font-size: 150%;
+}
+
+.container {
+  
+}
+
+.gameboard {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  justify-content: center;
+  padding: 50px;
+}
+
+.gameboard div {
+  text-align: center;
+  align-content: center;
+  border-radius: 0px;
+  border: 2px solid grey;
+}
