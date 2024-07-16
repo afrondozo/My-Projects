@@ -3,11 +3,17 @@ import { useState } from 'react';
 import './App.css';
 
 
+function Square({letter,onSquareClick, color}) {
+  return(
+    <div className={color} onClick={onSquareClick}>{letter}</div>
+
+  );
+}
+
 
 
 function GameBoard() {
-  type Color = 'green' | 'grey' | 'white';
-  const [color, setColor] = useState<Color>("white");
+  const [color, setColor] = useState("white");
  
   const word = 'DECOY';
 
@@ -20,7 +26,8 @@ function GameBoard() {
 
   return(
     <div className='gameboard'>
-      <div className={color} onClick={handleClick} > {word[0]} </div>
+      <div  className={color} onClick={handleClick} > {word[0]} </div>
+      <Square letter="Test" color={color} onSquareClick={handleClick} />
       <div> 2 </div>
       <div> 3 </div>
       <div> 4 </div>
@@ -52,13 +59,13 @@ function GameBoard() {
 function Tries() {
   return(
     <div>
-      <h1> TRIES: </h1>
+      <h1> TRIES: unlimted </h1>
     </div>
   );
 }
 
 
-function App() {
+export default function App() {
   return (
     <div className="Guessordle">
       <header className='title'> Guessordle </header>
@@ -69,5 +76,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
