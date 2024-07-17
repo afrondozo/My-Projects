@@ -11,8 +11,21 @@
 
 .board {
   border: 5px solid black;  
+  
 }
 
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  gap: 20px;
+  justify-content: center;
+  padding: 50px;
+  
+}
+
+
+/*
 .card-grid {
   display: grid;
   gap: 5px;
@@ -21,23 +34,10 @@
   justify-content: center;
   padding: 50px;
 }
+  */
+  
 
-.card {
-  text-align: center;
-  align-content: center;
-  border-radius: 0px;
-  border: 2px solid grey;
-  font-size: 150%;
-  color: black;
-}
 
-.green {
-  background-color: green;
-}
-
-.white {
-  background-color: white;
-}
 
 
 
