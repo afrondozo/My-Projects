@@ -1,17 +1,25 @@
 import React from 'react'
 import './SingleCard.css';
 
-function SingleCard({ card }) {
+
+function SingleCard({ card, handleChoice, flipped }) {
+  const handleClick = () => {
+    handleChoice(card);
+   };
+
   return (
     <div className='card' >
-        <div className='front'>
-          {card.val}
+      <div className={flipped ? 'flipped': ""}>
+        <div className='face front'>
+          <div className='front'>
+            {card.val}
+          </div>
         </div>
 
-        <div className='back'>
-          
+        <div className='face back' onClick={handleClick}>
+          <div className='back'> </div>
         </div>
-      
+      </div>
     </div>
 
   )

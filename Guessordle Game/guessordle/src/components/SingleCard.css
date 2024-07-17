@@ -6,30 +6,24 @@
   border: 2px solid grey;
   */
 }
-
-.card div {
+.face {
   width: 80px;
   height: 80px;
   display: block;
   border: 2px solid grey;
   border-radius: 6px;
-}
-
-
-.front {
-  position: relative;
-  text-align: center;
   align-content: center;
-  
 }
 
-.back {
-  position: relative;
+.card .face.front {
   text-align: center;
-  align-content: center;
-  
+  transform: rotateY(90deg);
+  position: absolute;
 }
 
+.flipped .face.back {
+  transform: rotateY(0deg);
+}
 
 
 
