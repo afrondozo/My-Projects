@@ -6,7 +6,7 @@ import { alphabet } from './components/Alphabet.js';
 import SingleCard from './components/SingleCard.js';
 
 // Get the word for the day
-const wordOfTheDay = "testy"; //words[Math.floor(Math.random() * words.length)];
+const wordOfTheDay =  words[Math.floor(Math.random() * words.length)];
 
 // Split word into chars and add letter objects to the cards array
 const cardSetup = [];
@@ -42,7 +42,9 @@ export default function App() {
   
   const handleChoice = (card) => {
     setFlips(flips + 1);
-    flipped ? setFlipped(true) : setFlipped(false);
+    if (card.val === wordOfTheDay[index]) {
+      setIndex(index + 1);
+    }
     
   }
 

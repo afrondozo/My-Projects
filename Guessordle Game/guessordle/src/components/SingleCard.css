@@ -15,16 +15,21 @@
   align-content: center;
 }
 
+.front {
+  text-align: center;
+}
+
+/*
 .card .face.front {
   text-align: center;
   transform: rotateY(90deg);
   position: absolute;
 }
 
-.flipped .face.back {
+.flipped .face.front {
   transform: rotateY(0deg);
 }
-
+*/
 
 
 /*
