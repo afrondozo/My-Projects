@@ -36,17 +36,17 @@ cardSetup.sort( () => Math.random() - 0.5)
 
 
 export default function App() {
+  const [board, setBoard] = useState(cardSetup);
   const [index, setIndex] = useState(0);
   const [flips, setFlips] = useState(0);
-  const [flipped, setFlipped] = useState(false);
+  const [flipCard, setFlipCard] = useState("");
   
   const handleChoice = (card) => {
     setFlips(flips + 1);
-    if (card.val === wordOfTheDay[index]) {
-      setIndex(index + 1);
-    }
     
   }
+
+  
 
   return (
     <div className="App">
@@ -59,12 +59,12 @@ export default function App() {
       <div className='board'>
         <div>{wordOfTheDay} {flips} </div>
         <div className='card-grid'>
-          {cardSetup.map(card => (
+          {board.map(card => (
               <SingleCard 
                 key={card.id} 
                 card={card}
                 handleChoice={handleChoice}
-                flipped={card === flipped}
+                flip={flipCard}
               />
           ))}
         </div>
