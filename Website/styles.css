@@ -331,4 +331,9 @@ section {
   text-align: left;
   padding-left: 15px;
   font-size: 95%;
+  height: 200px;
+}
+
+.details-container.experience {
+  height: 270px;
 }
