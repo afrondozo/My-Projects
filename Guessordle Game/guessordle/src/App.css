@@ -9,11 +9,11 @@
   font-size: 150%;
 }
 
-.container {
-  
+.board {
+  border: 5px solid black;  
 }
 
-.gameboard {
+.card-grid {
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(5, 80px);
@@ -22,13 +22,13 @@
   padding: 50px;
 }
 
-.gameboard div {
+.card {
   text-align: center;
   align-content: center;
   border-radius: 0px;
   border: 2px solid grey;
   font-size: 150%;
-  color: white;
+  color: black;
 }
 
 .green {

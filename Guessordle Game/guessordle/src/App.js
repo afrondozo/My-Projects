@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import './App.css';
-import './Board.js'
-import Board from './Board.js';
+import './components/Board.js'
+import Board from './components/Board.js';
 
 
 
