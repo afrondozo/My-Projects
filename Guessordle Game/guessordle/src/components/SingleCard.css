@@ -1,6 +1,7 @@
 .card {
   position: relative;
   align-items: center;
+  justify-content: center;
   border: 2px solid grey;
   transform: rotateY(180deg);
   animation: 1s hideCard linear;
@@ -25,10 +26,10 @@
   font-weight: bold;
   transition: transform 0.5s;
   transform: scale(0);
-  animation: 1s hideImage linear;
+  animation: 1s hideDiv linear;
 }
 
-@keyframes hideImage{
+@keyframes hideDiv{
   0%, 70%{
     transform: scale(1);
   }
@@ -39,10 +40,18 @@
 
 .card.active{
   transform: rotateY(0);
+  background-color: gray;
 }
-.card.correct{
+
+.correct {
+  background-color: green;
+}
+
+/*
+.card .correct{
   background-color: #65e469;
 }
+  */
 .card.wrong{
   background-color: #fd245a;
 }

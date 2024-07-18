@@ -12,7 +12,7 @@ for(let i = 0; i < 5; i++) {
     const letter = new Object();
     letter.val = wordOfTheDay[i];
     letter.id = i;
-    letter.stat = "active";
+    letter.stat = "";
 
     cardSetup.push(letter);
 }
@@ -40,19 +40,24 @@ export default function Board() {
     const [board, setBoard] = useState(cardSetup);
     const [index, setIndex] = useState(0);
 
-    // function handleClick() {
-    //     if (board[])
-    // }
+    function handleClick(id, key) {
+        if(board[id].val === wordOfTheDay[index]) {
+            board[id].stat = "active";
+            setBoard([...board])
+            setIndex(index + 1);
+        }
+    }
 
     return(
     <div className='board'>
         <div> {wordOfTheDay}  </div>
         <div className='card-grid'>
-            {board.map(card => (
+            {board.map((card, index) => (
                 <SingleCard 
-                key={card.id} 
+                key={index} 
                 card={card}
-                //handleClick={handleClick}
+                id = {index}
+                handleClick={handleClick}
                 />
             ))}
         </div>
