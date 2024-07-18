@@ -46,8 +46,10 @@
 .card.wrong{
   background-color: #fd245a;
 }
-.card.active img{
+.card.active div {
   transform: scale(1);
 }
+
+
 
 

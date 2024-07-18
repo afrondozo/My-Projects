@@ -12,7 +12,7 @@ for(let i = 0; i < 5; i++) {
     const letter = new Object();
     letter.val = wordOfTheDay[i];
     letter.id = i;
-    letter.stat = "";
+    letter.stat = "active";
 
     cardSetup.push(letter);
 }
@@ -40,9 +40,9 @@ export default function Board() {
     const [board, setBoard] = useState(cardSetup);
     const [index, setIndex] = useState(0);
 
-    function handleClick() {
-        if (board[])
-    }
+    // function handleClick() {
+    //     if (board[])
+    // }
 
     return(
     <div className='board'>
@@ -52,7 +52,7 @@ export default function Board() {
                 <SingleCard 
                 key={card.id} 
                 card={card}
-                handleClick={handleClick}
+                //handleClick={handleClick}
                 />
             ))}
         </div>

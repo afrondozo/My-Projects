@@ -7,7 +7,7 @@ function SingleCard({ card, handleChoice, isWinning, handleClick}) {
 
 
   return (
-    <div className={'card' + itemClass} onClick={handleClick} >
+    <div className={'card' + itemClass } onClick={handleClick} >
       <div> {card.val} </div>
     </div>
 

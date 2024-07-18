@@ -18,7 +18,7 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(5, 80px);
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
   padding: 50px;
   
