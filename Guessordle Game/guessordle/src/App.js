@@ -3,7 +3,6 @@ import { useState } from 'react';
 import './App.css';
 import { words } from './components/Words.js';
 import { alphabet } from './components/Alphabet.js';
-import SingleCard from './components/SingleCard.js';
 import Board from './components/Board.js';
 
 // Get the word for the day
@@ -37,33 +36,6 @@ cardSetup.sort( () => Math.random() - 0.5)
 
 
 export default function App() {
-  //const [board, setBoard] = useState(cardSetup);
-  // const [index, setIndex] = useState(0);
-  const [flips, setFlips] = useState(0);
-  const [flipCard, setFlipCard] = useState("");
-  const [isWinning, setIsWinning] = useState(false);
-  
-  // const handleChoice = (card) => {
-  //   setFlips(flips + 1);
-
-  //   if (card.val === wordOfTheDay[index]) {
-  //     setIndex(index + 1);
-  //     setFlipCard("Green");
-  //     setIsWinning(true);
-  //   } else if (card.val !== wordOfTheDay[index]) {
-  //     setIndex(0);
-  //     setIsWinning(false);
-  //   }  
-  // }
-
-  // to handle flip:
-  // 1. click on card
-  // 2. if letter is equal the current index of wordofday
-  //      - square will be green after flip and will stay there
-  //    else if letter is not equal to current index but exists in the word
-  //      - square will turn over and be yellow and then turn back around
-  //    else
-  //      - square will be grey and then turn back
 
   return (
     <div className="App">
@@ -72,25 +44,8 @@ export default function App() {
           GUESSORDLE 
         </h1>
       </nav>
-
-      <div> {flipCard} </div>
-
       <Board />
-
-      {/* <div className='board'>
-        <div>{wordOfTheDay} {flips} </div>
-        <div className='card-grid'>
-          {board.map(card => (
-              <SingleCard 
-                key={card.id} 
-                card={card}
-                //handleChoice={handleChoice}
-                //isWinning={isWinning}
-              />
-          ))}
-        </div>
-      </div> */}
-      
+  
     </div>
   );
 }

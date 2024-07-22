@@ -14,11 +14,15 @@ for(let i = 0; i < 5; i++) {
     letter.id = i;
     letter.stat = "";
 
+    // if (i === 0) {
+    //     letter.stat = " correct";
+    // }
+
     cardSetup.push(letter);
 }
 
 // Fills in rest of the cards array with random letters
-for(let i = 5; i < 25; i++) {
+for(let i = 5; i < 16; i++) {
   let char = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase();
 //   console.log("before", char);
 //   console.log('wordOfDay', wordOfTheDay);
@@ -42,14 +46,7 @@ export default function Board() {
     const [board, setBoard] = useState(structuredClone(cardSetup));
     const [index, setIndex] = useState(0);
 
-
-    // function reset() {
-    //     for (let i = 0; i < )
-    // };
-
-    
-
-    function handleClick(id, key) {
+    function handleClick(id) {
 
         if(board[id].val === wordOfTheDay[index]) {
             board[id].stat = "active correct";
@@ -58,21 +55,22 @@ export default function Board() {
         } else if (wordOfTheDay.includes(board[id].val)) {
             board[id].stat = "active yellow";
             setBoard([...board]);
-        } else {
-            board[id].stat = "active gray";
-            setBoard([...board]);
             setTimeout(() => {
-                //board[id].stat =
-                
-                //items[prev].stat = "";
                 console.log('reset!');
                 console.log(cardSetup);
                 setBoard(structuredClone(cardSetup));
                 setIndex(0);
-            }, 1000)
+            }, 800);
+        } else {
+            board[id].stat = "active gray";
+            setBoard([...board]);
+            setTimeout(() => {
+                console.log('reset!');
+                console.log(cardSetup);
+                setBoard(structuredClone(cardSetup));
+                setIndex(0);
+            }, 800);
         }
-
-
     }
 
     return(
