@@ -40,21 +40,20 @@
 
 .card.active{
   transform: rotateY(0);
-  background-color: gray;
 }
 
 .correct {
-  background-color: green;
+  background-color: rgb(18, 182, 18);
 }
 
-/*
-.card .correct{
-  background-color: #65e469;
+.gray{
+  background-color: gray;
 }
-  */
-.card.wrong{
-  background-color: #fd245a;
+
+.yellow {
+  background-color: yellow;
 }
+
 .card.active div {
   transform: scale(1);
 }

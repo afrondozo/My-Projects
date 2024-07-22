@@ -3,11 +3,11 @@ import './SingleCard.css';
 
 
 function SingleCard({ key, card, handleClick, id, }) {
-  const itemClass = card.stat ? "active" : ""
+  const itemClass = card.stat ? "active" + " correct": ""
 
 
   return (
-    <div className={'card ' + itemClass} onClick={() => handleClick(id, key)} >
+    <div className={'card ' + card.stat} onClick={() => handleClick(id, key)} >
       <div> {card.val} </div>
     </div>
 
