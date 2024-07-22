@@ -78,7 +78,6 @@ export default function Board() {
 
     return(
     <div className='board'>
-        <div> {wordOfTheDay}  </div>
         <div className='display-box'>
             <div className='text-display'> {display} </div>
         </div>

@@ -1,4 +1,4 @@
-import './SingleCard.css';
+//import '../App.css';
 
 
 function SingleCard({ card, handleClick, id, }) {

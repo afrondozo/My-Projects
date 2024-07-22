@@ -7,9 +7,6 @@ function Nav() {
             <h1>
                 GUESSORDLE 
             </h1>
-            <ul>
-                <li> How to play </li>
-            </ul>
       </nav>
     </div>
   )
