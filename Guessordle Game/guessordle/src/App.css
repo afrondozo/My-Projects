@@ -12,12 +12,6 @@
   border: 1px solid gray;
 }
 
-.board {
-    
-  
-}
-
-
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 80px);
@@ -89,6 +83,23 @@
 
 .card.active div {
   transform: scale(1);
+}
+
+/* TEXT DISPLAY */
+.display-box {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.text-display {
+  display: flex;
+  border-bottom: 3px solid black;
+  width: 350px;
+  height: 50px;
+  align-content: center;
+  justify-content: center;
+  font-size: xx-large;
 }
 
 

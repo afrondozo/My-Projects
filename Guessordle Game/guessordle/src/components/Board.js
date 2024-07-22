@@ -45,9 +45,10 @@ cardSetup.sort( () => Math.random() - 0.5);
 export default function Board() {
     const [board, setBoard] = useState(structuredClone(cardSetup));
     const [index, setIndex] = useState(0);
+    const [display, setDisplay] = useState("");
 
     function handleClick(id) {
-
+        setDisplay(display + board[id].val);
         if(board[id].val === wordOfTheDay[index]) {
             board[id].stat = "active correct";
             setBoard([...board]);
@@ -60,6 +61,7 @@ export default function Board() {
                 console.log(cardSetup);
                 setBoard(structuredClone(cardSetup));
                 setIndex(0);
+                setDisplay("");
             }, 800);
         } else {
             board[id].stat = "active gray";
@@ -69,6 +71,7 @@ export default function Board() {
                 console.log(cardSetup);
                 setBoard(structuredClone(cardSetup));
                 setIndex(0);
+                setDisplay("");
             }, 800);
         }
     }
@@ -76,6 +79,9 @@ export default function Board() {
     return(
     <div className='board'>
         <div> {wordOfTheDay}  </div>
+        <div className='display-box'>
+            <div className='text-display'> {display} </div>
+        </div>
         <div className='card-grid'>
             {board.map((card, index) => (
                 <SingleCard 
