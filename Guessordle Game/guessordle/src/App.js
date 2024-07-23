@@ -10,7 +10,7 @@ import Start from './components/Start.js';
 
 
 export default function App() {
-  const [showStartScreen, setShowStartScreen] = useState(true);
+  const [showStartScreen, setShowStartScreen] = useState(true); 
 
   const handleStartClick = () => {
       setShowStartScreen(false);

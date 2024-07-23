@@ -4,7 +4,7 @@ import SingleCard from './SingleCard.js';
 import { useState } from 'react';
 
 // Get the word for the day
-const wordOfTheDay =  words[Math.floor(Math.random() * words.length)].toUpperCase();
+const wordOfTheDay =  "DADDY";//words[Math.floor(Math.random() * words.length)].toUpperCase();
 
 // Split word into chars and add letter objects to the cards array
 const cardSetup = [];
@@ -13,10 +13,6 @@ for(let i = 0; i < 5; i++) {
     letter.val = wordOfTheDay[i];
     letter.id = i;
     letter.stat = "";
-
-    // if (i === 0) {
-    //     letter.stat = " correct";
-    // }
 
     cardSetup.push(letter);
 }
@@ -35,6 +31,7 @@ for(let i = 5; i < 16; i++) {
   letter.val = char.toUpperCase();
   letter.id = i;
   letter.stat = "";
+  letter.flipped = false;
 
   cardSetup.push(letter);
 }
@@ -46,34 +43,52 @@ export default function Board() {
     const [board, setBoard] = useState(structuredClone(cardSetup));
     const [index, setIndex] = useState(0);
     const [display, setDisplay] = useState("");
+    const [disableClick, setDisableClick] = useState(false); // State variable for click disablement
 
-    function handleClick(id) {
+    function check(index) {
+        if (index === 4) {
+            setDisableClick(true);
+        }
+    }
+
+    function handleClick(id, flipped) {
+        if (disableClick || flipped) {
+            return;
+        }
+
         setDisplay(display + board[id].val);
         if(board[id].val === wordOfTheDay[index]) {
             board[id].stat = "active correct";
+            board[id].flipped = true;
             setBoard([...board]);
             setIndex(index + 1);
         } else if (wordOfTheDay.includes(board[id].val)) {
             board[id].stat = "active yellow";
             setBoard([...board]);
+            setDisableClick(true);
             setTimeout(() => {
                 console.log('reset!');
                 console.log(cardSetup);
                 setBoard(structuredClone(cardSetup));
                 setIndex(0);
                 setDisplay("");
-            }, 800);
+                setDisableClick(false);
+            }, 900);
         } else {
             board[id].stat = "active gray";
             setBoard([...board]);
+            setDisableClick(true);
             setTimeout(() => {
                 console.log('reset!');
                 console.log(cardSetup);
                 setBoard(structuredClone(cardSetup));
                 setIndex(0);
                 setDisplay("");
-            }, 800);
+                setDisableClick(false);
+            }, 900);
         }
+
+        check(index);
     }
 
     return(
