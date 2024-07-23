@@ -152,17 +152,48 @@
   color: white;
 }
 
-/* START BUTTON */
+/* START SCREEN */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .start-screen {
-  width: 100vh;
-  height: 100vh;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  background-color: rgb(137, 173, 240);
 }
 
 .start-screen-container {
-  
+  text-align: center; /* Center text horizontally */
+  background-color: rgb(137, 173, 240); /* Example background color */
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid black;
+  width: 190px;
+
+}
+
+.start-screen-container p {
+  font-size: 115%;
+  font-family: "Alegreya", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.start-btn {
+  padding: 10px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  border: none;
+}
+
+.start-btn:hover {
+  cursor: pointer;
 }
 
   
