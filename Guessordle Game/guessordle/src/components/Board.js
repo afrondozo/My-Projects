@@ -4,7 +4,7 @@ import SingleCard from './SingleCard.js';
 import { useState } from 'react';
 
 // Get the word for the day
-const wordOfTheDay =  "DADDY";//words[Math.floor(Math.random() * words.length)].toUpperCase();
+const wordOfTheDay = words[Math.floor(Math.random() * words.length)].toUpperCase();
 
 // Split word into chars and add letter objects to the cards array
 const cardSetup = [];
