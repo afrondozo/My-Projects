@@ -1,9 +1,12 @@
+import logo from './icon.png';
+
 
 function Start({ onStartClick }) {
     return(
         <div className="start-screen">
             <div className="start-screen-container">
-                <h2> Insert Name </h2>
+                <img src={logo} alt="logo" />
+                <h2> My Game </h2>
                 <p> 
                     Flip over cards to uncover the hidden <br/>
                     5-letter word 
