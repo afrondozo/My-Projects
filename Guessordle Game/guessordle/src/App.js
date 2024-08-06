@@ -25,12 +25,5 @@ export default function App() {
           <Tutorial />
       </React.Fragment>}
     </div>
-
-    // <div className="App">
-    //   <Start />
-    //   <Nav />
-    //   <Board />
-    //   <Tutorial />
-    // </div>
   );
 }

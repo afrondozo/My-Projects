@@ -2,6 +2,7 @@ import { words } from './Words.js';
 import { alphabet } from './Alphabet.js';
 import SingleCard from './SingleCard.js';
 import { useState } from 'react';
+import '../styles/board.css' 
 
 // Get the word for the day
 const wordOfTheDay = words[Math.floor(Math.random() * words.length)].toUpperCase();
@@ -43,6 +44,7 @@ export default function Board() {
     const [board, setBoard] = useState(structuredClone(cardSetup));
     const [index, setIndex] = useState(0);
     const [display, setDisplay] = useState("");
+    const [tries, setTries] = useState(0);
     const [disableClick, setDisableClick] = useState(false); // State variable for click disablement
 
     function check(index) {
@@ -73,6 +75,7 @@ export default function Board() {
                 setIndex(0);
                 setDisplay("");
                 setDisableClick(false);
+                setTries(tries+1);
             }, 900);
         } else {
             board[id].stat = "active gray";
@@ -85,6 +88,7 @@ export default function Board() {
                 setIndex(0);
                 setDisplay("");
                 setDisableClick(false);
+                setTries(tries+1);
             }, 900);
         }
 
@@ -95,6 +99,7 @@ export default function Board() {
     <div className='board'>
         <div className='display-box'>
             <div className='text-display'> {display} </div>
+            <div className='tries-display'> <h3> Number of tries: {tries} </h3></div>
         </div>
         <div className='card-grid'>
             {board.map((card, index) => (

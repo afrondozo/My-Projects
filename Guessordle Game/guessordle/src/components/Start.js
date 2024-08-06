@@ -6,7 +6,7 @@ function Start({ onStartClick }) {
         <div className="start-screen">
             <div className="start-screen-container">
                 <img src={logo} alt="logo" />
-                <h2> My Game </h2>
+                <h2> WordFlip </h2>
                 <p> 
                     Flip over cards to uncover the hidden <br/>
                     5-letter word 

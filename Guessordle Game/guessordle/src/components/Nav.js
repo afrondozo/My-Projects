@@ -5,7 +5,7 @@ function Nav() {
     <div>
         <nav className='title'> 
             <h1>
-                GUESSORDLE 
+                WORDFLIP
             </h1>
       </nav>
     </div>
