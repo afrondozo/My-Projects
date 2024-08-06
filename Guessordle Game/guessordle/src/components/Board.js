@@ -47,16 +47,35 @@ export default function Board() {
     const [tries, setTries] = useState(0);
     const [disableClick, setDisableClick] = useState(false); // State variable for click disablement
 
+    function flipAll() {
+        for (let i = 0; i < 16; i++) {
+            if (!board[i].flipped) {
+                board[i].stat = "active gray"; 
+            };
+        };
+    }
+
     function check(index) {
         if (index === 4) {
             setDisableClick(true);
-        }
-    }
+            setTimeout(() => {
+                setBoard(prevBoard => {
+                    let newBoard = [...prevBoard]; // Create a copy of board
+                    for (let i = 0; i < 16; i++) {
+                        if (!newBoard[i].flipped) {
+                            newBoard[i].stat = "active gray";
+                        }
+                    }
+                    return newBoard; // Update the state with the modified board
+                });
+            }, 300);
+        };
+    };
 
     function handleClick(id, flipped) {
         if (disableClick || flipped) {
             return;
-        }
+        };
 
         setDisplay(display + board[id].val);
         if(board[id].val === wordOfTheDay[index]) {
@@ -90,10 +109,10 @@ export default function Board() {
                 setDisableClick(false);
                 setTries(tries+1);
             }, 900);
-        }
+        };
 
         check(index);
-    }
+    };
 
     return(
     <div className='board'>

@@ -27,7 +27,7 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  border: 2px solid grey;
+  border: 2px solid black;
   transform: rotateY(180deg);
   animation: 1s hideCard linear;
   background-color: white;
